@@ -63,9 +63,9 @@ for ($i=0; $i < $arrMainLen; $i++) {
     // $rndLen=rand(3, 10);
     for ($y=0; $y < rand(3, 10) ; $y++) { 
         if ($arrMain[$i] == "A") {
-            $arrIn[$y]="A";
+            $arrIn[]="A";
         } else {
-            $arrIn[$y]="B";
+            $arrIn[]="B";
         }
     }
     $arrMain[$i]=$arrIn;
@@ -73,8 +73,8 @@ for ($i=0; $i < $arrMainLen; $i++) {
 
 //PRITRUKAU LAIKO ...
 
-print_r($arrMain);
-// var_dump($arrMain);
+// print_r($arrMain);
+var_dump($arrMain);
 ?>
 
     
