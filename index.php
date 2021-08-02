@@ -66,7 +66,7 @@ for ($i=0; $i < $arrMainLen; $i++) {
     $arrMain[$i]=$arrIn;
 }
 
-//PRITUKAU LAIKO ...
+//PRITRUKAU LAIKO ...
 
 print_r($arrMain);
 // var_dump($arrMain);
