@@ -73,8 +73,8 @@ for ($i=0; $i < $arrMainLen; $i++) {
 
 //PRITRUKAU LAIKO ...
 
-// print_r($arrMain);
-var_dump($arrMain);
+print_r($arrMain);
+// var_dump($arrMain);
 ?>
 
     
