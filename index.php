@@ -59,17 +59,33 @@ echo "<br><br>";
 
 <?php
 
+
 for ($i=0; $i < $arrMainLen; $i++) { 
-    // $rndLen=rand(3, 10);
+    // $len= rand(3, 10);
+    $arrIn=[];
     for ($y=0; $y < rand(3, 10) ; $y++) { 
         if ($arrMain[$i] == "A") {
             $arrIn[]="A";
         } else {
             $arrIn[]="B";
         }
+        
     }
     $arrMain[$i]=$arrIn;
+    
 }
+
+// for ($i=0; $i < $arrMainLen; $i++) { 
+//     // $rndLen=rand(3, 10);
+//     for ($y=0; $y < rand(3, 10) ; $y++) { 
+//         if ($arrMain[$i] == "A") {
+//             $arrIn[]="A";
+//         } else {
+//             $arrIn[]="B";
+//         }
+//     }
+//     $arrMain[$i]=$arrIn;
+// }
 
 //PRITRUKAU LAIKO ...
 
@@ -77,6 +93,59 @@ print_r($arrMain);
 // var_dump($arrMain);
 ?>
 
+
+
+<h4>3. Uzduotis</h4>
+<!-- /////////////////////////////////////////////////// 3 /////////////////////////////////////////////////// -->
+
+<?php
+
+for ($i=0; $i < $arrMainLen; $i++) { 
+// echo "Countas pagal 10-i: "  .(10-count($arrMain[$i])) ." ";
+        $arrSecLen=count($arrMain[$i]);
+        if (   $arrSecLen < 10   ) {
+            for (   $y=0; $y < (10-$arrSecLen) ; $y++   ) { 
+                $arrMain[$i][] ="C";
+            }
+        }
+
+        
+
+    // $arrMain[$i][]=$arrIn;
     
+}
+
+// var_dump($arrMain);
+print_r($arrMain);
+
+?>
+
+
+
+<h4>Papildoma uzduotis</h4>
+<!-- /////////////////////////////////////////////////// Papildoma /////////////////////////////////////////////////// -->
+
+<?php
+
+$Ask=null;
+$Bsk=null;
+$Csk=null;
+
+for ($i=0; $i < $arrMainLen; $i++) { 
+    $arrSecLen=count($arrMain[$i]);
+    for ($y=0; $y < $arrSecLen; $y++) { 
+        if ($arrMain[$i][$y] == "A") {
+            $Ask++;
+        } elseif ($arrMain[$i][$y] == "B") {
+            $Bsk++;
+        } else {
+            $Csk++;
+        }
+    }
+}
+
+echo "A raidziu yra: " .$Ask .", B raidziu yra: " .$Bsk .", C raidziu yra: " .$Csk;
+
+?>
 </body>
 </html>
